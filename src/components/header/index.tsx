@@ -1,20 +1,20 @@
 import { h } from "preact";
 import { Link } from "preact-router/match";
-const style = require('./style.scss');
+import style from './style.scss';
 
 const Header: preact.FunctionalComponent = () => {
     return (
         <header class={style.header}>
-            <h1>Preact App</h1>
             <nav>
                 <Link activeClassName={style.active} href="/">
                     Home
                 </Link>
+            </nav>
+            <h1>Recipe App Name</h1>
+            <nav>
+
                 <Link activeClassName={style.active} href="/profile">
                     Me
-                </Link>
-                <Link activeClassName={style.active} href="/profile/john">
-                    John
                 </Link>
             </nav>
         </header>
