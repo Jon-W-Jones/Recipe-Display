@@ -35,15 +35,19 @@
       text-decoration: none;
       color: $primary;
       will-change: background-color;
+      &:hover,
+      &:active {
+        background: rgba(0, 0, 0, 0.2);
+      }
+      .active {
+        background: rgba(0, 0, 0, 0.4);
+      }
     }
-
-    a:hover,
-    a:active {
-      background: rgba(0, 0, 0, 0.2);
-    }
-
-    a.active {
-      background: rgba(0, 0, 0, 0.4);
+    .none {
+      display: none;
+      &:hover {
+        color: red;
+      }
     }
   }
 }
