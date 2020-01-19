@@ -31,6 +31,7 @@
     "build/*"
   ],
   "devDependencies": {
+    "@testing-library/preact": "^1.0.2",
     "@types/jest": "^23.3.10",
     "@types/webpack-env": "^1.13.9",
     "css-loader": "^1.0.1",
