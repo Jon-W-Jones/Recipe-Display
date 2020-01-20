@@ -1,17 +1,16 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
+import { recipeMock } from "../../common/mock/recipeData";
 import style from "./SearchList.scss";
-interface Recipe {
+export interface Recipe {
   name: string;
   steps: string[];
 }
+
 interface Props {}
 const SearchList: preact.FunctionalComponent<Props> = props => {
   const [recipeList, setRecipeList] = useState<Recipe[]>([]);
-  const recipeMock: Recipe = {
-    name: "Mock Recipe",
-    steps: ["Take the water", "Put it in the kettle", "Boil it"]
-  };
+
   useEffect(() => {
     const newList: Recipe[] = [];
     newList.push(recipeMock);

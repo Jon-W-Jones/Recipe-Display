@@ -7,4 +7,13 @@ describe("SearchList Tests", () => {
     const { container } = render(<SearchList />);
     expect(container).not.toBeNull();
   });
+  test("Should render recipe list.", () => {
+    const { container } = render(<SearchList />);
+    const recipeContainer = container.getElementsByTagName("ul");
+    expect(recipeContainer).not.toBeNull();
+    expect(recipeContainer.length).toBeGreaterThan(0);
+    const recipeItems = container.querySelectorAll(".recipeItem");
+    expect(recipeItems.length).toBeGreaterThan(0);
+    expect(recipeItems.item(0).textContent).toEqual("Mock Recipe");
+  });
 });
