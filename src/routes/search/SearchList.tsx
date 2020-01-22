@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { recipeMock } from "../../common/mock/recipeData";
+import SearchItem from "../../components/search/searchItem/SearchItem";
 import style from "./SearchList.scss";
 export interface Recipe {
   name: string;
@@ -13,15 +14,20 @@ const SearchList: preact.FunctionalComponent<Props> = props => {
 
   useEffect(() => {
     const newList: Recipe[] = [];
-    newList.push(recipeMock);
+    for (let i = 0; i < 9; i++) { newList.push(recipeMock); }
     setRecipeList(newList);
   }, []);
   return (
     <div className={style.containerName}>
-      <ul>
-        {recipeList.map(item => (
-          <li className={style.recipeItem}>{item.name}</li>
+      <ul className={style.recipeList}>
+        {recipeList.map(recipe => (
+          <li className={style.recipeItem}>
+            <SearchItem recipe={recipe} />
+          </li>
         ))}
+        <li className={style.recipeItem}>
+          <SearchItem recipe={recipeMock} />
+        </li>
       </ul>
     </div>
   );

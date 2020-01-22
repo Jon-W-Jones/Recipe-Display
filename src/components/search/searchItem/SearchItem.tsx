@@ -14,9 +14,15 @@ const SearchItem: FunctionalComponent<Props> = ({ recipe }: Props) => {
       <ol aria-label="Recipe Steps" className={style.instructions}>
         {recipe.steps.length > 0 &&
           recipe.steps.map((step, index) => {
-            <li aria-label={`Step ${index}`} className={style.step}>
-              {step}
-            </li>;
+            return (
+              <li
+                key={`${recipe.name} ${index}`}
+                aria-label={`Step ${index}`}
+                className={style.step}
+              >
+                {step}
+              </li>
+            );
           })}
       </ol>
     </div>

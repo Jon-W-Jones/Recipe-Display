@@ -13,7 +13,6 @@ describe("SearchList Tests", () => {
     expect(recipeContainer).not.toBeNull();
     expect(recipeContainer.length).toBeGreaterThan(0);
     const recipeItems = container.querySelectorAll(".recipeItem");
-    expect(recipeItems.length).toBeGreaterThan(0);
-    expect(recipeItems.item(0).textContent).toEqual("Mock Recipe");
+    expect(recipeItems.length).toEqual(10);
   });
 });

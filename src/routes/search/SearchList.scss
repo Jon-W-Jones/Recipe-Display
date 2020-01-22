@@ -1,8 +1,32 @@
+@import "../../style/palette.scss";
+
 .containerName {
   padding-top: 150px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.recipeItem {
-  background: white;
+.recipeList {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  justify-content: space-between;
+  width: 80%;
+  background: $primaryBgLg;
+
+  .recipeItem {
+    background: white;
+    box-shadow: 3px 3px 1px $primaryBgSm;
+    list-style-type: none;
+    width: 100%;
+    align-self: center;
+    width: 75%;
+  }
+  .recipeItem:not(:last-child) {
+    margin-bottom: 2%;
+  }
+  .recipeItem:last-child {
+    margin-bottom: 3px;
+  }
 }
