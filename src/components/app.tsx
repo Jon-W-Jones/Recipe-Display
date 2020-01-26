@@ -3,6 +3,7 @@ import { Route, Router, RouterOnChangeArgs } from "preact-router";
 
 import Home from "../routes/home";
 import Profile from "../routes/profile";
+import RecipePage from "../routes/recipe";
 import SearchList from "../routes/search/SearchList";
 import Header from "./header";
 
@@ -25,6 +26,7 @@ const App: preact.FunctionalComponent = () => {
         <Route path="/profile/" component={Profile} user="me" />
         <Route path="/profile/:user" component={Profile} />
         <Route path="/search" component={SearchList} />
+        <Route path="/recipe" component={RecipePage} />
       </Router>
     </div>
   );

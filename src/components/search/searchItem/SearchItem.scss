@@ -11,6 +11,12 @@
 }
 .itemTitle {
   margin-top: 0;
+  & a {
+    text-decoration: none;
+    color: black;
+  }
+}
+.itemTitle > a {
 }
 .itemDetails {
   padding-left: 1rem;

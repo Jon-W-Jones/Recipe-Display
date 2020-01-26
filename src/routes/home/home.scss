@@ -1,14 +1,33 @@
+@import "../../style/palette.scss";
 .home {
   padding: 10rem 1.3rem;
   min-height: 100%;
   width: 100%;
   text-align: center;
-  .search {
+  .searchCombo {
     margin-top: 2rem;
-    width: 75%;
-    min-height: 1.2rem; //should define global font size and set min height
-  }
-  .go {
-    font-size: 0.8rem; //placeholder
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .search {
+      width: 75%;
+      height: 2rem;
+      font-size: 1.5rem;
+    }
+    .go {
+      height: 2rem;
+      width: 10%;
+      min-width: 3rem;
+      font-size: 0.8rem; //placeholder
+      border-radius: 0.2rem;
+      background: $primary; //This needs to change, too little contrast.
+      color: $primaryTxtSm;
+      & a {
+        text-decoration: none;
+      }
+      @media only screen and (min-width: 992px) {
+        width: 7.5%;
+      }
+    }
   }
 }
