@@ -1,14 +1,14 @@
 .home {
-  padding: 150px 20px;
+  padding: 10rem 1.3rem;
   min-height: 100%;
   width: 100%;
   text-align: center;
   .search {
-    margin-top: 30px;
+    margin-top: 2rem;
     width: 75%;
-    min-height: 20px; //should define global font size and set min height
+    min-height: 1.2rem; //should define global font size and set min height
   }
   .go {
-    font-size: 12px; //placeholder
+    font-size: 0.8rem; //placeholder
   }
 }

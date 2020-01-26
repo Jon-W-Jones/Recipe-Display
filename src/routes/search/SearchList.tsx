@@ -6,6 +6,7 @@ import style from "./SearchList.scss";
 export interface Recipe {
   name: string;
   steps: string[];
+  description?: string;
 }
 
 interface Props {}
@@ -14,7 +15,9 @@ const SearchList: preact.FunctionalComponent<Props> = props => {
 
   useEffect(() => {
     const newList: Recipe[] = [];
-    for (let i = 0; i < 9; i++) { newList.push(recipeMock); }
+    for (let i = 0; i < 9; i++) {
+      newList.push(recipeMock);
+    }
     setRecipeList(newList);
   }, []);
   return (

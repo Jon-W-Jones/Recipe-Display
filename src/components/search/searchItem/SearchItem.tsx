@@ -10,21 +10,27 @@ interface Props {
 const SearchItem: FunctionalComponent<Props> = ({ recipe }: Props) => {
   return (
     <div>
-      <h3>{recipe.name}</h3>
-      <ol aria-label="Recipe Steps" className={style.instructions}>
-        {recipe.steps.length > 0 &&
-          recipe.steps.map((step, index) => {
-            return (
-              <li
-                key={`${recipe.name} ${index}`}
-                aria-label={`Step ${index}`}
-                className={style.step}
-              >
-                {step}
-              </li>
-            );
-          })}
-      </ol>
+      <h3 className={style.itemTitle}>{recipe.name}</h3>
+      {!!recipe.description && (
+        <p className={style.recipeDescription}>{recipe.description}</p>
+      )}
+      <div className={style.itemDetails}>
+        <h4 className={style.itemSteps}>Steps: </h4>
+        <ol aria-label="Recipe Steps" className={style.instructions}>
+          {recipe.steps.length > 0 &&
+            recipe.steps.map((step, index) => {
+              return (
+                <li
+                  key={`${recipe.name} ${index}`}
+                  aria-label={`Step ${index}`}
+                  className={style.step}
+                >
+                  {step}
+                </li>
+              );
+            })}
+        </ol>
+      </div>
     </div>
   );
 };
